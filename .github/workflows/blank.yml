@@ -24,5 +24,4 @@ jobs:
          ./deploy.sh
       - name: auswerten
         run: |
-           echo "Der Name war (groß): ${{ steps.run_deploy.outputs.name }}"
            echo "Der Name war (groß): ${{ steps.run_deploy.outputs.VORNAME }}"
