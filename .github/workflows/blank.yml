@@ -18,10 +18,10 @@ jobs:
       - name: run_deploy 
         shell: bash
         run: |
+         echo "name=ubuntu-latest" >> $GITHUB_OUTPUT 
          cd scripts
          chmod u+x ./deploy.sh
          ./deploy.sh
       - name: auswerten
         run: |
-           echo "Der Name war (groß): ${{ steps.run_deploy.outputs.VORNAME }}"
-           echo "Der Name war (klein): ${{ steps.run_deploy.outputs.vorname }}"
+           echo "Der Name war (groß): ${{ steps.run_deploy.outputs.name }}"
