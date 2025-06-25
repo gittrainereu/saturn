@@ -15,7 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - uses: actions/checkout@v4
-      - name: run_deploy 
+      - name: run_deploy
+        id: run_deploy
         shell: bash
         run: |
          echo "name=ubuntu-latest" >> $GITHUB_OUTPUT 
